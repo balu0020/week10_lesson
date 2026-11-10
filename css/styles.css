@@ -138,3 +138,40 @@ section:nth-of-type(4) article div {
 section:nth-of-type(4) article div:nth-of-type(2) {
     flex-grow: 2;
 }
+
+/**********************************
+
+        FLEX EXAMPLE FOR NAV
+
+**********************************/
+
+nav ul {
+    /* Make the list items inside the ul sit next to each other */
+    display: flex;
+
+    /* justify-content: space-evenly; */
+    /* ... This would be good if you wanted a text-based NAV */
+
+    /* You can tell the objects to wrap to the next line (row or colomn) if they no longer fit inside the flex box */
+    flex-wrap: wrap;
+}
+
+/* ... We can also use flex to make the nav look more like buttons */
+
+nav ul li {
+    flex-grow: 1;
+    background-color: silver;
+
+    /* You can put a flexbox inside a flexbox */
+    display: flex;
+}
+
+nav ul li a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+    background-color: aquamarine;
+}
