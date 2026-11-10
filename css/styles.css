@@ -175,3 +175,36 @@ nav ul li a {
 nav ul li a:hover {
     background-color: aquamarine;
 }
+
+/**********************************
+
+           MEDIA QUARIES
+
+**********************************/
+
+/* at a minimum of 640px, and above, apply these styles */
+@media screen and (min-width:640px) {
+    /* Apply a flexbox to the div with the class flexer, which contains the main and the aside, so the main and aside will sit next to each other */
+    .flexer {
+        display: flex;
+        gap: 1em;
+    }
+
+    /* Using flex-grow, weight the main and aside */
+    main {
+        flex-grow: 4;
+
+        /* make the content in the main distributed vertically to take up as much space as possible */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        /* Default order is 1, so by putting this to 2, we move it after the aside (Decorational only)*/
+        order: 2;
+    }
+
+    aside {
+        flex-grow: 1;
+    }
+
+}
